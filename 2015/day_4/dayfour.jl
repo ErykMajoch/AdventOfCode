@@ -6,7 +6,7 @@ function start_with(zeros)
   counter = 0
   while true
     hash = bytes2hex(md5(string(input, counter)))
-    if chop(hash, head=0, tail=length(hash)-5) == zeros
+    if chop(hash, head=0, tail=length(hash)-length(zeros)) == zeros
       break
     else
       counter += 1
